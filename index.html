@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doğum Günün Kutlu Olsun Aşkım</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to bottom, #ffe4e1, #fff0f5);
+      color: #333;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      margin-top: 50px;
+    }
+    section {
+      display: none;
+      padding: 60px 20px;
+      min-height: 90vh;
+    }
+    section.active {
+      display: block;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+    .gallery img {
+      max-width: 300px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .letter {
+      margin: 0 auto;
+      max-width: 700px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .letter p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .timeline {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .timeline ul {
+      list-style: none;
+      padding: 0;
+    }
+    .timeline li {
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 20px;
+    }
+    .timeline li::before {
+      content: "\2764";
+      position: absolute;
+      left: 0;
+      color: crimson;
+    }
+    nav {
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+    }
+    nav button {
+      margin: 0 15px;
+      background: none;
+      border: none;
+      color: crimson;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .audio-control {
+      display: none;
+    }
+    .surprise {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      color: darkmagenta;
+    }
+  </style>
+</head>
+<body>
+  <div class="audio-control">
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/sPWfmXBvgz4?autoplay=1&loop=1&playlist=sPWfmXBvgz4" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+  </div>
+
+  <nav>
+    <button onclick="showSection('giris')">Giriş</button>
+    <button onclick="showSection('fotograflar')">Albümümüz</button>
+    <button onclick="showSection('mektup')">Bir Küçük Not</button>
+    <button onclick="showSection('hikaye')">Dün, Bugün, Yarın</button>
+    <button onclick="showSection('surpriz')">A4</button>
+  </nav>
+
+  <section id="giris" class="active">
+    <h1>Doğum Günün Kutlu Olsun Aşkım 💖</h1>
+    <img src="https://i.pinimg.com/736x/9e/1e/ba/9e1eba2ead22c08f09bef55effa3d3b4.jpg" alt="Tom ve Jerry Sarılması" style="max-width: 300px; border-radius: 15px; margin-top: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+    <p style="margin-top: 20px;">İyi doğdun kovalamalara doyamadığım ateş böceğim 🌟</p>
+  </section>
+
+  <section id="fotograflar">
+    <h2>Albümümüz</h2>
+    <p style="max-width: 600px; margin: 0 auto 20px; font-size: 1.1rem;">Şimdilik nispeten küçük olabilir ama ölene kadar dolduracağımızdan dünyanın en büyük albümü olacaktır.</p>
+    <div class="gallery">
+      <img src="images/image1.jpg" alt="Foto 1">
+      <img src="images/image2.jpg" alt="Foto 2">
+      <img src="images/image3.jpg" alt="Foto 3">
+      <img src="images/image4.jpg" alt="Foto 4">
+      <img src="images/image5.jpg" alt="Foto 5">
+    </div>
+  </section>
+
+  <section id="mektup">
+    <h2>Bir Küçük Not</h2>
+    <div class="letter">
+      <p>Sevgili [Adı],</p>
+      <p>Buraya sana özel, kalbinden geçenleri yazacağın bir mektup gelecek. Tüm duygularını, anılarını, dileklerini burada ifade edebilirsin. Bu alan sadece sana ait olacak.</p>
+      <p>Her zaman seninle,<br>[Senin Adın]</p>
+    </div>
+  </section>
+
+  <section id="hikaye">
+    <h2>Dün, Bugün, Yarın</h2>
+    <div class="timeline">
+      <ul>
+        <li>Temmuz 2022 — Tanıştık</li>
+        <li>Ekim 2022 — İlk öpücüğümüz</li>
+        <li>Mart 2023 — İlk tatilimiz</li>
+        <li>Haziran 2023 — "Seni seviyorum" dedik</li>
+        <li>Bugün — Senin doğum günün 💕</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="surpriz">
+    <h2>A4 🎁</h2>
+    <p class="surprise">Sürpriz mesaj: Buraya onun hiç beklemediği bir şey ekleyebilirsin — komik bir anı, özel bir not, ya da geleceğe dair bir söz.</p>
+  </section>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
